@@ -33,10 +33,12 @@ func main() {
 }
 
 // *pointer == give me the value that is sitting in that memory address
+// this is a type description; it means we're working with a pointer to a type
 func (pointerToPerson *person) updateFirstName(newFirstName string) {
 	// this line doesnt work? p.firstName = newFirstName
 	// we must utilize pointers
 
+	// this vvv is an operator, it means we want to change the value the pointer is 'pointing' to
 	(*pointerToPerson).firstName = newFirstName
 }
 

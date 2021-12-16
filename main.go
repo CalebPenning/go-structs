@@ -24,11 +24,11 @@ func main() {
 		},
 	}
 
-	fmt.Println("I'm am Jim still")
-	jim.print()
-	// &variable == give me the memory address of this value
-	jimPointer := &jim
-	jimPointer.updateFirstName("JAMES>LOL")
+	// jimPointer := &jim, way to get memory address
+	// however, passing in jim, while taking *person rather than just person
+	// go takes a shortcut thru the "pass by value" nature of itself
+	// and just updates the value AT the memory address of that struct
+	jim.updateFirstName("JAMES>LOL")
 	jim.print()
 }
 
